@@ -1,0 +1,43 @@
+body{
+    background-color: white;
+    color: #012840;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr ;
+    margin: 0 auto;
+    max-width: 600px;        
+    grid-gap: 6px;
+    color: #012840;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+input[type=text], input[type=password], input[type=date], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 6px 0;    
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    
+}
+  
+input[type=button] {
+    width: 100%;
+    background-color: #012840;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border-radius: 30px;
+    border: solid #012840;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-family: 'Montserrat', sans-serif
+}
+
+input[type=button]:hover {
+    background-color: white;
+    color: #012840;
+}
+  

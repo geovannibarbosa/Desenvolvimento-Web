@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title></title>
+        <script src="../script/login.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+        <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../css/cadastro.css" media="screen" />        
+        <link rel="stylesheet" type="text/css" href="../css/login.css" media="screen" />     
+    </head>
+    <body>
+        <header>
+            <a href="../index.html" class="logoGvn"><img src="../assets/logoGvn.png"></a>
+            <ul>
+                <li class="headertext"><a href="./cadastro.html">Cadastro</li></a> 
+            </ul>
+        </header>
+
+        <section class="form">
+            <h1 style="text-align: center;">Faça o seu cadastro!</h1>
+            <div>
+                <form>
+                    <label for="lname">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Email">
+
+                    <label for="lname">Senha</label>
+                    <input type="password" id="senha" name="password"  placeholder="Senha">
+      
+                    <input type="button" value="Submit" onclick="login()">
+            </div>
+        </section>
+
+    </body>
+</html>

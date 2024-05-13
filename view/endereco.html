@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title></title>
+        <script src="../script/endereco.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+        <link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
+        <link rel="stylesheet" type="text/css" href="../css/cadastro.css" media="screen" />        
+    </head>
+    <body>
+        <header>
+            <a href="../index.html" class="logoGvn"><img src="../assets/logoGvn.png"></a>
+            <ul>
+                <li class="headertext"><a href="./home.html">Home</li></a>
+            </ul>
+        </header>
+        <section class="form">
+            <h1 style="text-align: center;">Faça o seu cadastro!</h1>
+            <div>
+                <form>
+                    <label for="name">Nome do local</label>
+                    <input type="text" id="title" name="title" placeholder="Nome do local">
+                
+                    <label for="lname">CEP</label>
+                    <input type="text" id="cep" name="cep" placeholder="CEP">
+
+                    <label for="lname">Endereço</label>
+                    <input type="text" id="address" name="address" placeholder="Endereço">
+
+                    <label for="lname">Número</label>
+                    <input type="text" id="number" name="number"  placeholder="Número">
+
+                    <label for="lname">Complemento</label>
+                    <input type="text" id="complement" name="complement"  placeholder="Complemento">
+
+                    <input type="button" value="Cadastrar Endereço" onclick="cadastroEndereco()">
+
+                </div>
+            
+        </section>
+    </body>
+</html>

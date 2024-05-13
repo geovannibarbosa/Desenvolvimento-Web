@@ -1,0 +1,20 @@
+.form_address {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    max-width: 1200px;
+    color: #012840;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Estilos para a lista */
+.form_address ul {
+    padding: 0; /* Remover padding padrão */
+}
+
+/* Estilos para os itens da lista */
+.form_address li {
+    list-style: none; /* Remover marcadores de lista */
+    margin-bottom: 10px; /* Adicionar espaçamento entre os itens */
+    text-align: center; /* Centralizar texto */
+}
