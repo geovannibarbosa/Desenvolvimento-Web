@@ -11,21 +11,57 @@ async function endereco() {
     let responseApi = await resposta.json();
 
     let listaUl = document.getElementById("lista");
-    responseApi.data.forEach(shortcut => {
-        let title = shortcut.title;
-        let cep = shortcut.cep;
-        let address = shortcut.address;
-        let number = shortcut.number;
-        let complement = shortcut.complement;
 
-        // Criando um elemento li para cada endereço
-        let li = document.createElement("li");
-        li.textContent = `${title} - CEP: ${cep}, ${address} ${number}, ${complement}`;
-        listaUl.appendChild(li);
+    let table = document.createElement("table");
+    table.style.width = '100%';
+    table.setAttribute('border', '1');
+    
+    let thead = document.createElement("thead");
+    let headerRow = document.createElement("tr");
+    
+    let headers = ["Título", "CEP", "Endereço", "Número", "Complemento"];
+    headers.forEach(headerText => {
+        let th = document.createElement("th");
+        th.appendChild(document.createTextNode(headerText));
+        headerRow.appendChild(th);
     });
+    
+    thead.appendChild(headerRow);
+    table.appendChild(thead);
+    
+    let tbody = document.createElement("tbody");
+    
+    responseApi.data.forEach(elemento => {
+        let row = document.createElement("tr");
+    
+        let titleCell = document.createElement("td");
+        titleCell.appendChild(document.createTextNode(elemento.title));
+        row.appendChild(titleCell);
+    
+        let cepCell = document.createElement("td");
+        cepCell.appendChild(document.createTextNode(elemento.cep));
+        row.appendChild(cepCell);
+    
+        let addressCell = document.createElement("td");
+        addressCell.appendChild(document.createTextNode(elemento.address));
+        row.appendChild(addressCell);
+    
+        let numberCell = document.createElement("td");
+        numberCell.appendChild(document.createTextNode(elemento.number));
+        row.appendChild(numberCell);
+    
+        let complementCell = document.createElement("td");
+        complementCell.appendChild(document.createTextNode(elemento.complement));
+        row.appendChild(complementCell);
+    
+        tbody.appendChild(row);
+    });
+    
+    table.appendChild(tbody);
+    
+    listaUl.parentNode.replaceChild(table, listaUl);
+    
 }
 
-// Chame a função após o carregamento do HTML
-document.addEventListener("DOMContentLoaded", function() {
-    endereco();
-});
+endereco();
+
